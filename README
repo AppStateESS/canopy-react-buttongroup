@@ -1,0 +1,31 @@
+A Bootstrap button group for Canopy/phpWebsite using React. Expects Bootstrap 4.
+
+const buttons = [
+  {
+    value: '1',
+    label: <span>
+        <i className="fas fa-user"></i>&nbsp; Person</span>
+  }, {
+    value: '2',
+    label: <span>
+        <i className="fas fa-users"></i>&nbsp; People</span>
+  }
+]
+
+const matchingValue = '1' // Person
+
+const setPersonAmount(val) {
+  this.setState({persons : val})
+}
+
+const activeColor = 'success' // Bootstrap primary colors only
+
+return (
+<ButtonGroup
+  name="input_name"
+  buttons={buttons}
+  match={matchingValue}
+  handle={setPersonAmount}
+  vertical={false}
+  activeColor={activeColor}/>
+)
