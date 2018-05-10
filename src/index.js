@@ -11,7 +11,8 @@ class ButtonGroup extends Component {
   render() {
     let buttons = this.props.buttons.map(function (value, key) {
       const activeColor = 'btn-' + this.props.activeColor
-      let cn = classnames('btn', 'btn-outline-dark')
+      const buttonColor = 'btn-' + this.props.color
+      let cn = classnames('btn', buttonColor)
       if (this.props.match !== null && this.props.match !== undefined) {
         if (this.props.match.constructor === Array && (this.props.match.indexOf(value.value) !== -1)) {
           cn = classnames('btn', 'active', activeColor)
@@ -61,6 +62,7 @@ ButtonGroup.propTypes = {
   buttons: PropTypes.array.isRequired,
   handle: PropTypes.func.isRequired,
   activeColor: PropTypes.string,
+  color: PropTypes.string,
   match: PropTypes.oneOfType(
     [PropTypes.string, PropTypes.number, PropTypes.array,]
   ),
@@ -70,6 +72,7 @@ ButtonGroup.propTypes = {
 
 ButtonGroup.defaultProps = {
   activeColor: 'dark',
+  color: 'outline-dark',
   match: null,
   name: null
 }
