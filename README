@@ -1,5 +1,6 @@
-A Bootstrap button group for Canopy/phpWebsite using React. Expects Bootstrap 4.
+## A Bootstrap button group for AppStateESS/Canopy using React. Expects Bootstrap 4.
 
+```javascript
 const buttons = [
   {
     value: '1',
@@ -29,3 +30,4 @@ return (
   vertical={false}
   activeColor={activeColor}/>
 )
+```
