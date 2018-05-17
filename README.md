@@ -1,4 +1,7 @@
-## A Bootstrap button group for AppStateESS/Canopy using React. Expects Bootstrap 4.
+## canopy-react-buttongroup
+
+A Bootstrap button group for AppStateESS/Canopy using React.
+Expects Bootstrap 4.
 
 ```javascript
 const buttons = [
