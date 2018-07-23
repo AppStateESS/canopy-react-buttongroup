@@ -26,6 +26,7 @@ class ButtonGroup extends Component {
           type="button"
           key={key}
           className={cn}
+          disabled={this.props.disabled}
           value={value.value}
           onClick={this.props.handle.bind(null, value.value)}>
           {value.label}
@@ -67,14 +68,16 @@ ButtonGroup.propTypes = {
     [PropTypes.string, PropTypes.number, PropTypes.array,]
   ),
   vertical: PropTypes.bool,
-  name: PropTypes.string
+  name: PropTypes.string,
+  disabled: PropTypes.bool,
 }
 
 ButtonGroup.defaultProps = {
   activeColor: 'dark',
   color: 'outline-dark',
   match: null,
-  name: null
+  name: null,
+  disabled: false,
 }
 
 export default ButtonGroup
