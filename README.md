@@ -1,14 +1,22 @@
-## canopy-react-buttongroup
+## @essappstate/canopy-react-buttongroup
 
 A Bootstrap button group for AppStateESS/Canopy using React.
 Expects Bootstrap 4.
 
+### Install
+```
+npm install --save-dev @essappstate/canopy-react-buttongroup
+```
+
+### Example
 ```javascript
+
+import ButtonGroup from '@essappstate/canopy-react-buttongroup'
+
 const buttons = [
   {
     value: '1',
-    label: <span>
-        <i className="fas fa-user"></i>&nbsp; Person</span>
+    label: <span><i className="fas fa-user"></i>&nbsp; Person</span>
   }, {
     value: '2',
     label: <span>
