@@ -75,7 +75,7 @@ ButtonGroup.propTypes = {
 ButtonGroup.defaultProps = {
   activeColor: 'dark',
   color: 'outline-dark',
-  match: null,
+  match: '',
   name: null,
   disabled: false,
 }
