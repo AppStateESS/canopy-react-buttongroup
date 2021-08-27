@@ -1,6 +1,6 @@
 {
   "name": "@essappstate/canopy-react-buttongroup",
-  "version": "0.2.5",
+  "version": "0.2.6",
   "description": "Button group for Canopy/phpwebsite",
   "main": "build/index.js",
   "scripts": {

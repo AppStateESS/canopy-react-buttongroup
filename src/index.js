@@ -1,7 +1,6 @@
 'use strict'
 import React, {Component} from 'react'
 import PropTypes from 'prop-types'
-import classnames from 'classnames'
 
 class ButtonGroup extends Component {
   constructor(props) {
@@ -10,18 +9,19 @@ class ButtonGroup extends Component {
 
   render() {
     let buttons = this.props.buttons.map(
-      function(value, key) {
-        const activeColor = 'btn-' + this.props.activeColor
-        const buttonColor = 'btn-' + this.props.color
-        let cn = classnames('btn', buttonColor)
+      function (value, key) {
+        const activeColor = 'btn btn-' + this.props.activeColor
+        const buttonColor = 'btn btn-' + this.props.color
+
+        let cn = buttonColor
         if (this.props.match !== null && this.props.match !== undefined) {
           if (
             this.props.match.constructor === Array &&
             this.props.match.indexOf(value.value) !== -1
           ) {
-            cn = classnames('btn', 'active', activeColor)
+            cn = activeColor
           } else if (this.props.match == value.value) {
-            cn = classnames('btn', 'active', activeColor)
+            cn = activeColor
           }
         }
 
@@ -45,7 +45,7 @@ class ButtonGroup extends Component {
     let hidden
     if (this.props.match && this.props.match.constructor === Array) {
       hidden = this.props.match.map(
-        function(value, key) {
+        function (value, key) {
           let name = this.props.name + '[]'
           return <input type="hidden" name={name} value={value} key={key} />
         }.bind(this)
@@ -75,11 +75,11 @@ ButtonGroup.propTypes = {
   match: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.number,
-    PropTypes.array
+    PropTypes.array,
   ]),
   vertical: PropTypes.bool,
   name: PropTypes.string,
-  disabled: PropTypes.bool
+  disabled: PropTypes.bool,
 }
 
 ButtonGroup.defaultProps = {
@@ -87,7 +87,7 @@ ButtonGroup.defaultProps = {
   color: 'outline-dark',
   match: '',
   name: null,
-  disabled: false
+  disabled: false,
 }
 
 export default ButtonGroup
